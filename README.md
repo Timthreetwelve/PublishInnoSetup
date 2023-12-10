@@ -8,7 +8,7 @@ ______         _      _  _       _       _____                        _____     
                                                                                               | |    
                                                                                               |_|
 ```                                                                                                                  
-PowerShell scripts that I use to publish Inno Setup installers
+## PowerShell scripts that I use to publish Inno Setup installers
 
 The PowerShell script is executed in the .csproj file only during Publish.  See the **Exec** statement near the end.
 ``` XML
