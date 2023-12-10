@@ -1,4 +1,13 @@
-# PublishInnoSetup
+```
+  _____            _       _   _         _         _____                              _____          _                   
+ |  __ \          | |     | | (_)       | |       |_   _|                            / ____|        | |                  
+ | |__) |  _   _  | |__   | |  _   ___  | |__       | |    _ __    _ __     ___     | (___     ___  | |_   _   _   _ __  
+ |  ___/  | | | | | '_ \  | | | | / __| | '_ \      | |   | '_ \  | '_ \   / _ \     \___ \   / _ \ | __| | | | | | '_ \ 
+ | |      | |_| | | |_) | | | | | \__ \ | | | |    _| |_  | | | | | | | | | (_) |    ____) | |  __/ | |_  | |_| | | |_) |
+ |_|       \__,_| |_.__/  |_| |_| |___/ |_| |_|   |_____| |_| |_| |_| |_|  \___/    |_____/   \___|  \__|  \__,_| | .__/ 
+                                                                                                                  | |    
+                                                                                                                  |_|    
+```                                                                                                                  
 PowerShell scripts that I use to publish Inno Setup installers
 
 The PowerShell script is executed in the .csproj file only during Publish.  See the **Exec** statement near the end.
