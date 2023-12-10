@@ -54,7 +54,7 @@ if (-not (Test-Path $issScript)) {
 Write-Host "PubSetup: Inno Setup Script is: $issScript"
 
 # Remove any spaces from the ends of the variable
-if ($publishType -eq $null) {
+if ($null -eq $publishType) {
     $publishType = [String]::Empty
 }
 else {
