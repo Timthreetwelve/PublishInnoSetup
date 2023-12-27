@@ -6,7 +6,7 @@
 #  <Target Name="CompileSetup" AfterTargets="PublishZip">
 #    <PropertyGroup>
 #      <PowerShellScript>-File "D:\Visual Studio\Source\PowerShell\PublishInnoSetup\PubSetupEx.ps1"</PowerShellScript>
-#      <ScriptName>-issScript "$(ProjectDir)Inno_Setup\GetMyIPEx.iss"</ScriptName>
+#      <ScriptName>-issScript "$(ProjectDir)Inno_Setup\<setup file name>.iss"</ScriptName>
 #    </PropertyGroup>
 #    <PropertyGroup Condition="'$(PublishDir.Contains(`Self_Contained_x64`))'">
 #      <PubType>-publishType SC_x64</PubType>
@@ -29,9 +29,9 @@ $elapsed = [System.Diagnostics.Stopwatch]::StartNew()
 # Begin message
 $now = (Get-Date).ToString("HH:mm:ss.ff")
 Write-Host "PubSetup: entering script at $now"
-Write-Host "PubZip: Inno Setup script  : $issScript"
-Write-Host "PubZip: Publish Folder     : $publishFolder"
-Write-Host "PubZip: Publish type       : $publishType"
+Write-Host "PubSetup: Inno Setup script  : $issScript"
+Write-Host "PubSetup: Publish Folder     : $publishFolder"
+Write-Host "PubSetup: Publish type       : $publishType"
 
 # Verify Inno Setup compiler location
 $iscc = "C:\Program Files (x86)\Inno Setup 6\ISCC.exe"
@@ -83,7 +83,7 @@ $define2 = "#define PublishFolder `"$publishFolder`""
 # Write the file putting each statement on a separate line.
 # This will overwrite a file with the same name.
 try {
-    Write-Host "PubZip: Writing $tempFile."
+    Write-Host "PubSetup: Writing $tempFile."
     $fileContent = $define1
     $fileContent += "`r`n"
     $fileContent += $define2
